@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Design Mantra - Residential and Commercial Interior Design Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="design_mantra_logo.png" type="image/png" sizes="16x16">
+
+	<style>
+		.row{
+			padding: 0 0 15px 0;
+		}
+		.gallery{
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+		.carousel{
+			min-height: 175px;
+			width: 100%;
+			object-fit: contain;
+		}
+	</style>
+
+  <style>
+  
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #A0B9B7; /* #f4511e (orange original); alt: A0B9B7, A0ABAA*/ 
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #A0B9B7;
+      font-size: 50px;
+  }
+  .logo {
+      color: #A0B9B7;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #A0B9B7;
+  }
+  .carousel-indicators li {
+      border-color: #A0B9B7;
+  }
+  .carousel-indicators li.active {
+      background-color: #A0B9B7;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #A0B9B7; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #A0B9B7;
+      background-color: #fff !important;
+      color: #A0B9B7;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #A0B9B7 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #A0B9B7;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #fff; /* #A0B9B7 (gray-blue original); alt: fff*/
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #A0B9B7 !important; /* #fff (white original); alt: A0B9B7*/
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #A0B9B7 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #A0B9B7;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Design Mantra</a>
+		<img class="navbar-brand" src="design_mantra_logo.png" alt="Design Mantra">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#designer">DESIGNER</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#faqs">FAQ's</a></li>
+        <li><a href="#testimonials">TESTIMONIALS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Design Mantra</h1> 
+  <p>Residential and Commercial Interior Design Services</p>
+</div>
+
+<!-- Container (Home Section) -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <h1><b><span style="color:#000000">Free Discovery Call - 30 mins:</span> <span style="color:#6c938f">(310) 504-0573</span></b></h1><br>
+      <h4>Design Mantra provides Interior Design Services for residential and commercial establishments.  We take pride in designing for you, so you create memories with your family - whether you're looking to refresh your home, up-size, downsize, and anything in-between.
+			<br><br>
+			At Design Mantra, we offer different options in our design services for our clients, from Consultation to Full Service.  Listening to you and providing the life-style you are looking for, is the goal of Design Mantra.
+		</h4>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-home logo"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Designer Section) -->
+<div id="designer" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-3">
+      <img style="text-align:right" src="designer.jpg" alt="Designer" class="slideanim">
+    </div>
+    <div class="col-sm-9">
+      <h2>DESIGNER</h2><br>
+      <h4><strong>Geetha Vasishta</strong> brings a unique international perspective to her position as a full-service
+				interior designer who works with prominent residential and commercial clients throughout
+				the South Bay area.
+		<br><br>
+			She has Masters in Liberal Arts and Diploma in Interior Design from India. As the region’s
+				only design professional trained in India, Geetha provides a novel level of sophistication and
+				style to her projects.
+		<br><br>
+			Geetha, gained her career both in India and United States. Known as a “problem solver”, she
+				helps her clients with design challenges in their space. Her company, Design Mantra
+				presents various design services for the clients.
+		<br><br>
+			She also offers Vaastu Interiors based on ancient Indian Archaeological Science <i>"Vaastu Shastra"</i>&nbsp;
+				(A Holistic Approach).  Like Yoga and Ayurveda, Vaastu Shastra is a traditional system, which is 
+				7,000 years old.  Its guidelines help to enhance the quality of life in designing interiors for 
+				home and workplace.
+		<br><br>
+			An avid volunteer, Geetha has supported her community over the years, which includes
+				leading the Parent Teacher Association (PTA) program chairs. She is currently one of the
+				Board of Directors of South Bay Conservatory, a non-profit performing arts school, governed
+				by all-volunteers on the panel.
+      </h4>
+      <br><a href="#contact"><button class="btn btn-default btn-lg">Get in Touch</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2>SERVICES</h2><br>
+      <h4><strong>DESIGN CONSULTATION SERVICE:</strong> If you are looking to freshen up your space or need help with current design challenges like, furniture placement, storage problems, selecting color schemes, then Consultation Service is a good place to start.  This will help you to implement your project with ease.</h4>
+      <ul>
+         <li>
+            <h4>2-hour on-site Design Consultation</h4>
+         </li>
+         <li>
+            <h4>Will offer general advice and recommendation</h4><br>
+         </li>
+      </ul>
+      <h4><strong>PERSONALIZED DESIGN PACKAGE:</strong> A single room package is perfect for you if you love shopping online or retail, and would enjoy managing all purchases and installations yourself.  This will enable you to feel comfortable to take on your room project.</h4>
+      <ul>
+         <li>
+            <h4>On-site visit</h4>
+         </li>
+         <li>
+            <h4>Personalized design package provides furniture layouts, paint color recommendations, and any other essential features necessary to pull the whole room together</h4><br>
+         </li>
+      </ul>
+      <h4><strong>START-TO-FINISH DESIGN PACKAGE:</strong> This package is ideal if you - have a busy and active life-style, and want the professional to handle all the process involved, so you can enjoy the final-result of your space.  This package will end with a Big Reveal!</h4>
+      <ul>
+         <li>
+            <h4>Starts with concept and continues all the way to completion of the project</h4>
+         </li>
+         <li>
+            <h4>The full service package includes but not limited to establishing a budget, presentations, detail drawings of furniture layout, elegant options for paint color, a full-sourcing service of products, and other elements to create the ambiance needed</h4><br>
+         </li>
+      </ul>
+      <h4><strong>OTHER DESIGN SERVICES:</strong></h4>
+      <ul>
+         <li>
+            <h4>Kitchen, Bath, Media Room, Home Office, Children's Room, Laundry Room</h4>
+         </li>
+         <li>
+            <h4>Commercial Projects</h4>
+         </li>
+         <li>
+            <h4>Home Staging to Sell</h4>
+         </li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-off logo slideanim"></span>
+	</div>
+  </div>
+</div>
+
+<!-- Container (FAQ's Section) -->
+<div id="faqs" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-question-sign logo slideanim"></span>
+	</div>
+    <div class="col-sm-9">
+      <h2>FAQ's</h2><br>
+      <h4><strong>How do you charge your design fees?</strong></h4>
+      <h4>Except for the Design Consultation Service, which is a flat fee, the fees for the rest of our design services are based on scope of work.</h4><br>
+      <h4><strong>Your Design Consultation Service is for 2 hours.  What if I need more consulting time?</strong></h4>
+      <h4>We have a solution for that.  You are welcome to purchase a block of extra consulting time of 2 to 4 hours at a reduced rate.</h4><br>
+      <h4><strong>Once I have paid the initial consultation, can I upgrade to another design service?</strong></h4>
+      <h4>Yes, absolutely!  Please let your Designer know within 30 days of your paid initial consultation that you want to upgrade the design service.  The investment in the initial consultation will be credited into your Letter of Agreement if you decide to do your project with Design Mantra.</h4><br>
+      <h4><strong>Does your design service include purchasing fee?</strong></h4>
+      <h4>The design fee does not include purchasing fee, it is for professional design service only.  Merchandise purchasing services will be provided by Design Mantra after design work has been completed, approved, signed and payment is made prior to ordering.  Purchase of merchandise will be provided to you at Design Mantra's most favorable price plus purchasing fee which includes administrative and operational expenses to handle details pertaining to the process.</h4><br>
+      <h4><strong>What about accessories?  Are they included in your design implementation?</strong></h4>
+      <h4>The accessories are not included in our design fees. Design implementation does not cover selection of accessories other than during normal shopping for general specification purposes.</h4><br>
+      <h4><strong>Can we contact you during weekends?</strong></h4>
+      <h4>Design Mantra business hours are 9:30 AM to 4:30 PM PT, Monday through Friday.  If you are calling after hours or on weekends, please note that you can expect to receive a response the following business day.</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery (Gallery Section) -->
+<div id="gallery" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2>GALLERY</h2><br>
+			<div class="row">
+				<div class="col-sm-4"><img src="gallery/1.jpeg" alt="Coffee Table" class="gallery"></div>
+				<div class="col-sm-4"><img src="gallery/4.jpg" alt="Shower" class="gallery"></div>
+				<div class="col-sm-4"><img src="gallery/5.jpg" alt="Booth Seating" class="gallery"></div>
+			</div>
+			<br><br>
+			<div class="row">
+				<div class="col-sm-4"><img src="gallery/2.jpeg" alt="Chair" class="gallery"></div>
+				<div class="col-sm-4"><img src="gallery/3.jpg" alt="Sink" class="gallery"></div>
+				<div class="col-sm-4"><img src="gallery/6.jpg" alt="Table Seating" class="gallery"></div>
+			</div>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			</ol>
+			
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="col-lg-12">
+						<h4 class="carousel"><strong>"Mrs. Geetha has elegantly designed the wall-unit for the living room at my residence. I am happy and satisfied with her execution. I wish her all the best for a bright future in her career of interior designing."</strong></h4>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-lg-12">
+						<h4 class="carousel"><strong>"This letter is in appreciation to the interior design done by Geetha for the living room of my residence. I am happy  and satisfied with her work. I wish all success in her career."</strong></h4>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-lg-12">
+						<h4 class="carousel"><strong>"We were glad to have Geetha as a consultant when we were remodeling our restaurant and grocery store.  She shared numerous key design solutions which allowed customers to easily identify their favorite products and resulted in more sales. Geetha is friendly, patient and professional.  I highly recommend Geetha for any and all of your design needs."</strong></h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="col-lg-12">
+						<h4 class="carousel"><strong>"Geetha was referred to me by a friend.  I am glad I retained her to design the seating area of my restaurant. Geetha took many elements into consideration in her design.  She cleverly came up with an idea for eye-catching table tops that would not only serve its function but also bring in additional revenue to the restaurant. Geetha is a great designer and helped me to transform my restaurant into a positive environment and a work of art. She is knowledgeable and very good in her work.  It was a delight to work with her."</strong></h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="col-lg-12">
+						<h4 class="carousel"><strong>"We thank Geetha for her efforts in designing/execution of the interiors at our office and showroom.  The designs are appealing and functional."</strong></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-picture logo slideanim"></span>
+    </div>
+  </div>
+</div>
+
+<!--
+
+// Container (Testimonials Section)
+<div id="testimonials" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2>TESTIMONIALS</h2><br>
+      <h4><strong>"Mrs. Geetha has elegantly designed the wall-unit for the living room at my residence. I am happy and satisfied with her execution. I wish her all the best for a bright future in her career of interior designing."</strong></h4>
+      <h4><strong>"This letter is in appreciation to the interior design done by Geetha for the living room of my residence. I am happy  and satisfied with her work. I wish all success in her career."</strong></h4>
+      <h4><strong>"We were glad to have Geetha as a consultant when we were remodeling our restaurant and grocery store.  She shared numerous key design solutions which allowed customers to easily identify their favorite products and resulted in more sales. Geetha is friendly, patient and professional.  I highly recommend Geetha for any and all of your design needs."</strong></h4>
+      <h4><strong>"Geetha was referred to me by a friend.  I am glad I retained her to design the seating area of my restaurant. Geetha took many elements into consideration in her design.  She cleverly came up with an idea for eye-catching table tops that would not only serve its function but also bring in additional revenue to the restaurant. Geetha is a great designer and helped me to transform my restaurant into a positive environment and a work of art. She is knowledgeable and very good in her work.  It was a delight to work with her."</strong></h4>
+      <h4><strong>"We thank Geetha for her efforts in designing/execution of the interiors at our office and showroom.  The designs are appealing and functional."</strong></h4>
+	</div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-thumbs-up logo slideanim"></span>
+	</div>
+  </div>
+</div>
+
+-->
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2><br>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within one business day.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Torrance, CA </p>
+      <p><span class="glyphicon glyphicon-phone"></span> (310) 504-0573</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> info@designmantra.com</p>
+      <p><span class="glyphicon glyphicon-time"></span> Monday-Friday: 9:30-4:30pm</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+		  <form action="mailto:info@designmantra.com" method="post" enctype="text/plain">
+		        <div class="col-sm-6 form-group">
+		          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+		        </div>
+		        <div class="col-sm-6 form-group">
+		          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+		        </div>
+		      </div>
+		      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+		      <div class="row">
+		        <div class="col-sm-12 form-group">
+		          <button class="btn btn-default pull-right" type="submit">Send</button>
+		        </div>
+		  </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Design Mantra &copy 2025</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  // Slide in elements on scroll
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
